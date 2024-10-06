@@ -77,4 +77,4 @@ console.log(krsnaRap.substring(0, 10)); // Output: substring from index 0 to 10
 console.log(krsnaRap.slice(0, 10)); // Output: string sliced from index 0 to 10
 
 // repeat method - returns a new string with a specified number of copies of the original string
-console.log("Hello ".repeat(3)); // Output: "Hello Hello Hello "
+console.log("Hello ".repeat(3)); // Output:  "Hello Hello Hello "
