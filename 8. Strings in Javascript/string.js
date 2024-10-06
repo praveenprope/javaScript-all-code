@@ -1,1 +1,1 @@
-// string in js
+    // String and Sring methods in JavaScript
