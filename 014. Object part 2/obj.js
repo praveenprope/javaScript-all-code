@@ -125,3 +125,37 @@ console.log(instaUser1.hasOwnProperty('loggedIn'));   // Checking if 'loggedIn' 
 
 console.log(instaUser1.hasOwnProperty('offline'));    // Checking if 'offline' exists (it does not)
 // Output: false
+
+
+// Object 'cource' represents the course details, including the course name, fees, and teacher.
+const cource = {
+    courseName: "fullStack", // Name of the course
+    courseFees: 3829902,     // Fees of the course
+    courceTeacher: "unknownMan" // Name of the teacher
+}
+
+// Accessing the object properties using the dot (.) notation
+console.log(cource.courseName); // Output: fullStack
+
+// Destructuring the 'cource' object to extract the 'courceTeacher' property
+const { courceTeacher } = cource;
+console.log(courceTeacher); // Output: unknownMan
+
+// Destructuring the 'cource' object with renaming the property.
+// Here, 'courceTeacher' is renamed to 'Teacher'.
+const { courceTeacher: Teacher } = cource;
+console.log(Teacher); // Output: unknownMan
+
+// Example of a simple functional React component
+const Header = ({ fullName = "unknown" }) => {
+    // This component receives 'fullName' as a prop with a default value of "unknown".
+    return (
+        <header>
+            <h1>Hello, {fullName}!</h1>
+        </header>
+    );
+};
+
+// Rendering the 'Header' component and passing the 'fullName' argument.
+// In this case, "John Doe" is passed, but if no argument is passed, "unknown" will be used by default.
+Header({ fullName: "John Doe" }); // Output: Hello, John Doe!
