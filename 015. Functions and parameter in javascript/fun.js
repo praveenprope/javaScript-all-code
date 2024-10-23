@@ -92,4 +92,3 @@ function addArray(newArray){
 
 console.log(addArray(myarr))
 console.log(addArray(let = [23,443,23,"jdj"]))
-//end
