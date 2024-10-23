@@ -57,3 +57,38 @@ loginUserMessage2();  // No argument is passed, so it prints 'Please enter a use
 loginUserMessage2("Alex");  // This prints 'Alex user is logged in'
 
 
+// shoping cart
+ 
+function totalCartPrice(...prices){  //... thsi a rest operator
+     return prices
+}
+ 
+console.log(totalCartPrice(20,32,3,4,45,54))
+
+// use objects in functions
+
+const userDetails = {
+   usernName: "unknown",
+   userage: 35,
+   gmail:"123@email.com"
+
+}
+
+function addObject(Details){
+    return Details
+}
+console.log(addObject(userDetails))
+console.log(addObject(object = {
+    Name:"osnot",
+    age:19,
+
+}))
+
+const myarr = [12,32,23,23]
+
+function addArray(newArray){
+    return newArray[0]
+}
+
+console.log(addArray(myarr))
+console.log(addArray(let = [23,443,23,"jdj"]))
