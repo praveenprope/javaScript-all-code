@@ -29,7 +29,7 @@ console.log(`${test} test`);  // This prints 'undefined test' because 'test' is 
 
 function addnum(num1, num2) {
     let result = num1 + num2;  // The sum of 'num1' and 'num2' is stored in the variable 'result'
-    return result;  // The function returns the value of 'result' to the caller
+    return result;  // The function returns the value of 'result' to the caller and stops execution here
 }
 
 const finalResult = addnum(8, 8);  // The returned value (16) is stored in 'finalResult'
@@ -49,7 +49,7 @@ loginUserMessage("Sidhu");  // This will print 'Sidhu user is logged in' to the 
 function loginUserMessage2(userName) {  // We can also set a default value like 'userName = "Sam"'
     if (userName === undefined) {  // This checks if 'userName' was not passed to the function
         console.log("Please enter a username");  // If 'userName' is undefined, this message is printed
-        return;  // The function stops execution here
+        return;  // The function stops execution here without any further action
     }
     console.log(`${userName} user is logged in`);  // If a valid 'userName' is passed, it prints this message
 }
@@ -57,38 +57,36 @@ loginUserMessage2();  // No argument is passed, so it prints 'Please enter a use
 loginUserMessage2("Alex");  // This prints 'Alex user is logged in'
 
 
-// shoping cart
- 
-function totalCartPrice(...prices){  //... thsi a rest operator
-     return prices
+// shopping cart example
+
+function totalCartPrice(...prices){  // The '...prices' syntax is the rest operator, allowing us to pass multiple values as an array
+     return prices;  // Returns the array of all prices passed to the function
 }
  
-console.log(totalCartPrice(20,32,3,4,45,54))
+console.log(totalCartPrice(20,32,3,4,45,54));  // Logs the array of prices to the console: [20,32,3,4,45,54]
 
-// use objects in functions
+// using objects in functions
 
 const userDetails = {
-   usernName: "unknown",
-   userage: 35,
-   gmail:"123@email.com"
-
+   userName: "unknown",
+   userAge: 35,
+   email:"123@email.com"
 }
 
-function addObject(Details){
-    return Details
+function addObject(details){
+    return details;  // Returns the passed object as it is, allowing the function caller to use this object if needed
 }
-console.log(addObject(userDetails))
-console.log(addObject(object = {
-    Name:"osnot",
-    age:19,
 
-}))
+console.log(addObject(userDetails));  // Logs the 'userDetails' object
+console.log(addObject({ Name:"osnot", age:19 }));  // Logs a new object with Name and age properties
 
-const myarr = [12,32,23,23]
+// using arrays in functions
+
+const myArr = [12,32,23,23];
 
 function addArray(newArray){
-    return newArray[0]
+    return newArray[0];  // Returns the first element of the passed array
 }
 
-console.log(addArray(myarr))
-console.log(addArray(let = [23,443,23,"jdj"]))
+console.log(addArray(myArr));  // Logs the first element of 'myArr' (12)
+console.log(addArray([23,443,23,"jdj"]));  // Logs the first element of the passed array (23)
