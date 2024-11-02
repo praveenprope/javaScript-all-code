@@ -1,81 +1,85 @@
-// Control flow in JavaScript
+// Control Flow in JavaScript
 
-// if Statement
-
+// 1. if Statement
 const isUserLogged = true;
-if(isUserLogged){    // Check true codition
-    console.log("Yes User is Logged")
+if (isUserLogged) {    // Checks if condition is true
+    console.log("Yes, User is Logged In");
 }
 
-// else statement
-
+// 2. else Statement
 const strNum = "8";
-if(strNum === 8){  // if this codition is not true else codtition is print
-    console.log("Same Data Type")
-}  else {
-    console.log("Not Same Data Type")
+if (strNum === 8) {  // Checks if condition is true (strict equality for both value and type)
+    console.log("Same Data Type and Value");
+} else {
+    console.log("Not the Same Data Type or Value");
 }
 
-// else if statement for chrck multiple codition
-
+// 3. else if Statement for checking multiple conditions
 const priceMoney = 1000;
-if(priceMoney<200){
-    console.log("less than 200")
-} else if (priceMoney<400){
-      console.log("less than 400")
-}
- else if (priceMoney<600){
-      console.log("less than 600")
-}
- else if (priceMoney<800){
-      console.log("less than 800")
-}
- else if (priceMoney<1000){
-      console.log("less than 1000")
-}
- else {
-      console.log("less than 1200 or more")
+if (priceMoney < 200) {
+    console.log("Less than 200");
+} else if (priceMoney < 400) {
+    console.log("Less than 400");
+} else if (priceMoney < 600) {
+    console.log("Less than 600");
+} else if (priceMoney < 800) {
+    console.log("Less than 800");
+} else if (priceMoney < 1000) {
+    console.log("Less than 1000");
+} else {
+    console.log("1000 or more");
 }
 
-// one more expample
-
+// 4. Another example with if statement and local variable
 const Score = 100;
-if(Score>=100){
+if (Score >= 100) {
     let Power = "Fly";
-    console.log(`Player power is ${Power}`)
+    console.log(`Player's power is ${Power}`);
 }
 
-// using && and operator
-
+// 5. Using && (AND) Operator
 let isUserHaveAccount = true;
 let isUserHaveDebitCard = true;
 let isUserHaveMoney = false;
-let Shopping = ["Yes","No"];
+let Shopping = ["Yes", "No"];
 
-
-if(isUserHaveAccount && isUserHaveDebitCard){  // check both codtion are true
-    console.log(` ${Shopping[0]} User Can Shoping`)
-};
-
-if(isUserHaveAccount && isUserHaveDebitCard && isUserHaveMoney){  // check all three codtions if one codition is false code print else statment
-      console.log(`${Shopping[0]} User Can Shoping`)
-} else {
-    console.log(`${Shopping[1]} User Cant Shoping`)
+if (isUserHaveAccount && isUserHaveDebitCard) {  // Checks if both conditions are true
+    console.log(`${Shopping[0]}, User Can Shop`);
 }
 
-// using || or operator
-
-if(isUserHaveAccount || isUserHaveDebitCard || isUserHaveMoney){  // check all three codtions if one codition is true code print if  statment
-    console.log(`${Shopping[0]} User Can Shoping`)
+if (isUserHaveAccount && isUserHaveDebitCard && isUserHaveMoney) {  // Checks if all conditions are true
+    console.log(`${Shopping[0]}, User Can Shop`);
 } else {
-  console.log(`${Shopping[1]} User Cant Shoping`)
+    console.log(`${Shopping[1]}, User Cannot Shop`);
 }
 
-// coditional operators
+// 6. Using || (OR) Operator
+if (isUserHaveAccount || isUserHaveDebitCard || isUserHaveMoney) {  // Checks if any one condition is true
+    console.log(`${Shopping[0]}, User Can Shop`);
+} else {
+    console.log(`${Shopping[1]}, User Cannot Shop`);
+}
 
-// ==   -- Equal
-// !=   -- not Equal
-// ===  -- Check equal and also check dataType
-// > -- Greater than
-// < -- Less than
-// <=, >= less than eqaul and greater than or equal
+// 7. Comparison Operators
+// ==   -- Equal (loose equality, ignores data type)
+// !=   -- Not equal
+// ===  -- Strict equality, checks both value and data type
+// !==  -- Not equal and also checks data type
+// >    -- Greater than
+// <    -- Less than
+// >=   -- Greater than or equal
+// <=   -- Less than or equal
+
+// 8. Nullish Coalescing Operator (??) -- Returns the right operand if the left is null or undefined
+let val1;
+let val2;
+
+val1 = null ?? 20;         // val1 will be 20 because null is "nullish"
+val2 = undefined ?? 10;    // val2 will be 10 because undefined is "nullish"
+
+console.log(val1, val2);   // Output: 20 10
+
+// 9. Ternary Operator (?)
+// Syntax: condition ? value_if_true : value_if_false
+let age = 15;
+age >= 18 ? console.log("You have voting rights") : console.log("You do not have voting rights");
