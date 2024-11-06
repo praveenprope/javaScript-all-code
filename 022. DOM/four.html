@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;" >
+    <ul class="mainList" >
+        <li>JavaScript</li>
+    </ul>
+   
+
+    <script>
+
+    //  function codingLan(lang){    
+    //   const lan =  document.createElement('li');
+    //   lan.innerHTML = lang;
+    //   lan.style.backgroundColor = "red";
+    //   document.querySelector('.mainList').appendChild(lan)
+    //  }
+    //  codingLan("goLang")
+
+   // 2nd way
+
+    function codingLan(value){
+        const lan = document.createElement('li');
+        lan.appendChild(document.createTextNode(value));
+        document.querySelector('.mainList').appendChild(lan)
+    }
+    const myLoop = () => {
+    for (let i = 0; i < 10000; i++) {
+        console.log(i);
+    }
+};
+    codingLan('goLang');
+    codingLan('typeScript')
+    codingLan('Java')
+   
+//  edit
+  
+const repLace = document.querySelector('li:nth-child(3)')
+console.log(repLace)
+const newli = document.createElement('li');
+newli.textContent = "c++"
+repLace.replaceWith(newli)
+
+const remove = document.querySelector('li:last-child')
+remove.remove()
+
+    </script>
+</body>
+</html>
