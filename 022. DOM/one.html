@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div style="display: flex; justify-content: space-around;" id="firstDiv">
+        <p>SuperMan</p>
+        <p>Batman</p>
+        <p>SpiderMan</p>
+        <p>IronMan</p>
+    </div>
+    <div>
+        <h2 class="company">Marvel</h2>
+        <h2 class="company">Disney</h2>
+        <h2 class="company">IS ONE COMPANY</h2>
+    </div>
+
+    <script>
+        // Select an element by ID and change its style
+        const heros = document.getElementById('firstDiv');  // Selects the <div> with id="firstDiv"
+        heros.style.backgroundColor = "red";                // Changes the background color of this div to red
+
+        // Select all <p> elements using querySelectorAll (returns a NodeList of matching elements)
+        const herosName = document.querySelectorAll('p');   // Selects all <p> elements on the page
+        console.log(herosName);                             // Logs NodeList of <p> elements to the console
+        
+        // Loop through each <p> element and style it
+        herosName.forEach((item) => {                       // For each <p> element:
+            item.style.border = "2px solid black";          // Adds a black border
+            item.style.padding = '4px';                     // Adds padding
+        });
+
+        // Select all elements with class "company" using getElementsByClassName
+        const company = document.getElementsByClassName('company'); // Selects all elements with class="company"
+        
+        // Convert HTMLCollection to an array so we can use forEach
+        const MainCompany = Array.from(company);            // Converts HTMLCollection to an array
+        console.log(MainCompany);                           // Logs array of company elements to console
+
+        // Change the color of each "company" element to red
+        MainCompany.forEach((item) => {                     // For each <h2> element with class "company":
+            item.style.color = "red";                       // Changes text color to red
+        });
+
+        // Additional selectors for learning purposes:
+
+        // Select the first <p> element only
+        const firstHero = document.querySelector('p');      // Selects the first <p> element on the page
+        firstHero.style.fontWeight = 'bold';                // Makes the text bold
+
+        // Select all <h2> elements using tag name selector
+        const allHeadings = document.getElementsByTagName('h2'); // Selects all <h2> elements
+        Array.from(allHeadings).forEach((heading) => {      // Converts HTMLCollection to an array and loops through
+            heading.style.textTransform = 'uppercase';      // Makes each heading uppercase
+        });
+
+        // Select elements using complex CSS selector (e.g., all <p> inside #firstDiv)
+        const divHeros = document.querySelectorAll('#firstDiv p'); // Selects all <p> elements inside #firstDiv
+        divHeros.forEach((item) => {                        // Loops through each <p> in #firstDiv
+            item.style.fontSize = '20px';                   // Sets font size to 20px
+        });
+
+    </script>
+</body>
+</html>
