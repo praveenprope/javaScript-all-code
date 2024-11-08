@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        ul#images {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul#images li {
+            margin: 10px;
+        }
+
+        ul#images img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+
+        ul#images img:hover {
+            transform: scale(1.05);
+        }
+
+
+        a#googleLink {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #4285F4;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a#googleLink:hover {
+            background-color: #357ae8;
+        }
+
+
+        @media (max-width: 600px) {
+            ul#images img {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            a#googleLink {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🌟 Amazing Images of WWE Superstars 🌟</h1>
+    <ul id="images">
+        <li>
+            <img width="200px" alt="Kane" id="kane"
+                src="https://www.wwe.com/f/styles/og_image/public/all/2018/06/Kane_bio--65ab89f8efe18b45ad4a047eab1900df.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Brock" id="Brock"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJj0Em_Q3rL8mstUCeK7lXmX8wjVDUgimWg&s">
+        </li>
+        <li>
+            <img width="200px" alt="Undertaker" id="Undertaker"
+                src="https://i.pinimg.com/736x/0f/7f/57/0f7f57231dcc77038ff670366e16e368.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="John Cena" id="John" src="https://i.ytimg.com/vi/8ubWi1XuPTc/maxresdefault.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Khali" id="Khali"
+                src="https://statico.sportskeeda.com/wp-content/uploads/2015/11/the-great-khali-1448895450-800.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Randy" id="Randy"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZquZYEiVV4tNMrcAsG0XxvF_YFI9TRPIBAQ&s">
+        </li>
+        <li>
+            <img width="200px" alt="BigShow" id="BigShow"
+                src="https://www.si.com/.image/c_fill,w_1200,ar_1:1,f_auto,q_auto,g_auto/MTY5NzE4Nzk1Njc2NDI3NDI1/wwe-big-show-paul-wight-return.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Braywayyt" id="BrayWayyt"
+                src="https://external-preview.redd.it/IMlJ61VXZ1NFTxoUYOMS0h3oBGxe63zy9IU0K6uR4pQ.jpg?width=640&crop=smart&auto=webp&s=50874e92d3db27bc205a8f7c6c30e0d3cbf85e67">
+        </li>
+        <li>
+            <img width="200px" alt="Rock" id="Rock"
+                src="https://cdn.itrwrestling.com/app/uploads/content/1707232477253985980/the-rock-sd.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Triple" id="Triple"
+                src="https://wallpapercave.com/wp/wp5614516.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Kane" id="Kane2"
+                src="https://upload.wikimedia.org/wikipedia/en/9/93/WWEjd07.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Seth" id="Seth"
+                src="https://getwallpapers.com/wallpaper/full/f/6/8/1504498-wwe-wrestlemania-31-wallpaper-1920x1080-retina.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Stive" id="Stive"
+                src="https://i.pinimg.com/736x/87/5f/5d/875f5d38667f2f6dadb7b0c530cfc2a1.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Miz" id="Miz"
+                src="https://i.pinimg.com/736x/37/69/e2/3769e23b1ef03a0ea4fcf5f51c4c5abb.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Miz" id="Miz"
+                src="https://static0.thesportsterimages.com/wordpress/wp-content/uploads/2020/07/Rusev-Lana_1700x900.jpg">
+        </li>
+        <li>
+            <img width="200px" alt="Miz" id="Miz"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1uydoV1XmcHIW_UbyT3jHylu5gLJQCiBoA&s">
+        </li>
+    </ul>
+        <li>
+            <img width="200px" alt="Miz" id="Miz" src="https://i.pinimg.com/736x/4d/26/e7/4d26e7530a7bde05207dd4056ee04b40.jpg">
+        </li>
+    </ul>
+    <a id="googleLink" href="https://www.google.co.in/">🔗 Go to Google</a>
+
+</body>
+<script>
+    // Adding a click event listener to the Brock image
+    document.getElementById('Brock').addEventListener('click', function (e) {
+        console.log('Brock is clicked');
+        console.log(e);  // Logs event details (e.g., event type, timestamp)
+        const timeStamp = e.timeStamp;
+        console.log(`Timestamp: ${timeStamp}`);  // Display the timestamp when the image is clicked
+    }, false);
+
+
+    // type, timeStamp, defualtprevent
+    // target. toElement, srcElement, currentTarget
+    // clint x, client y, screen x, screen y,
+    // altkey, ctrl key , shiftKey, keycode
+
+
+    // Event bubbling: Parent element 'ul' will log when any image is clicked
+    document.getElementById('images').addEventListener('click', function () {
+        console.log('Clicked inside the ul');
+    }, false);
+
+    // Event bubbling: 'Undertaker' image will log separately when clicked
+    document.getElementById('Undertaker').addEventListener('click', function () {
+        console.log('Clicked on Undertaker image');
+    }, false);
+
+    // Uncomment below for capturing phase (capturing is from top-level down to target)
+    // document.getElementById('images').addEventListener('click', function() {
+    //     console.log('Clicked inside the ul (capturing phase)');
+    // }, true);
+
+    // document.getElementById('Undertaker').addEventListener('click', function() {
+    //     console.log('Clicked on Undertaker image (capturing phase)');
+    // }, true);
+
+    // Prevent default action on the Google link (does not redirect on click)
+    document.getElementById('googleLink').addEventListener('click', (e) => {
+        e.preventDefault();  // Stops link from navigating
+        console.log('Default link behavior prevented');
+    }, false);
+
+    // Remove clicked image from list
+    document.getElementById('images').addEventListener('click', (e) => {
+        if (e.target.tagName === "IMG") {  // Check if the clicked target is an image
+            const removeImg = e.target.parentNode;  // Get the parent 'li' element of the clicked image
+            removeImg.remove();  // Remove the 'li' element (thus removing the image)
+            console.log('Image removed');
+        }
+    }, false);
+</script>
+
+</html>
