@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Card</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #1c92d2, #f2fcfe);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid #1c92d2;
+      margin-top: -60px;
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      color: #333333;
+      margin: 10px 0 5px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: #777777;
+      margin: 5px 0;
+      font-weight: normal;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666666;
+      margin: 5px 0;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      border-top: 1px solid #e0e0e0;
+      padding-top: 15px;
+    }
+
+    .stats div {
+      flex: 1;
+      text-align: center;
+    }
+
+    .stats div span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1c92d2;
+    }
+
+    .stats div p {
+      font-size: 0.8rem;
+      color: #666666;
+    }
+
+    .details {
+      margin-top: 10px;
+      display: flex;
+      text-align: left;
+    }
+
+    .details p {
+      margin: 5px 0;
+      color: #444444;
+    }
+
+    .details span {
+      font-weight: bold;
+      color: #1c92d2;
+    }
+
+    .button {
+      margin-top: 15px;
+    }
+
+    .button a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      background: #1c92d2;
+      color: #ffffff;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .button a:hover {
+      background: #155a92;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="avatar" src="https://avatars.githubusercontent.com/u/583231" alt="GitHub Avatar">
+    <h2 id="name">Octocat</h2>
+    <h3 id="username">@octocat</h3>
+    <p id="bio">I'm a friendly GitHub mascot!</p>
+
+    <div class="details">
+      <p><span>Location:</span> San Francisco</p>
+      <p><span>Company:</span> GitHub</p>
+      <span>Member Since:</span> <p id="created_at" > 2011-01-25</p>
+    </div>
+
+    <div class="stats">
+      <div>
+        <span id="repos">8</span>
+        <p>Repositories</p>
+      </div>
+      <div>
+        <span id="followers">3934</span>
+        <p>Followers</p>
+      </div>
+      <div>
+        <span id="following">9</span>
+        <p>Following</p>
+      </div>
+      <div>
+        <span id="gists">5</span>
+        <p>Gists</p>
+      </div>
+    </div>
+    <div class="button">
+      <a id="profile-link" href="https://github.com/octocat" target="_blank">View Profile</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
